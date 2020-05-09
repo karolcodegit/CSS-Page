@@ -1,0 +1,47 @@
+:root {
+    --light: 0.5;
+    --glow: 5px;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-family: "Monda", sans-serif;
+    min-height: 100vh;
+    background-size: cover;
+    background-image: url("../_img/background.jpg");
+    background-position: center center;
+}
+.night {
+    height: 100vh;
+    background-color: black;
+    opacity: calc(1 - var(--light)); /* zmienna */
+}
+.neon {
+    font-size: 4rem;
+    color: #47ff00;
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    letter-spacing: 0.3rem;
+    text-shadow: rgba(25, 255, 255, 0.8) 0 0 calc(5 * var(--glow)), #47ff00 0 0 var(--glow);
+    opacity: var(--light);
+}
+.neon i.far.fa-lightbulb {
+    font-size: 10rem;
+    letter-spacing: 1.5rem;
+}
+input[type="range"] {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    height: 36px;
+    width: 90%;
+    cursor: pointer;
+}
+
+@media (max-width: 840px) {
+    html {
+        font-size: 0.7rem;
+    }
+}
